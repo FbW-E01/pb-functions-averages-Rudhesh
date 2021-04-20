@@ -31,11 +31,25 @@ function calculateRoundAverages(golfScores) {
 }
 
 function calculateTotalAverages(golfScores) {
-  
+  let  totalAverages = 0;
   for (let i = 0; i < golfScores.length; i++) {
-    console.log(golfScores[i])
+    let Scores = golfScores[i];
+    let totalSum = 0;
+    for (let j = 0; j < Scores.length; j++) {
+       totalSum += Scores[j];
+    }
+   let averageof = totalSum / Scores.length;
+  
+   totalAverages = totalAverages + averageof ;
+  
+   
+
   }
+  averageOfAverages = totalAverages / golfScores.length
+  console.log(`The average score for round is ${( averageOfAverages).toFixed(2)}`); 
 }
+
+
 
 
 
